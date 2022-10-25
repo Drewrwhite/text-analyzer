@@ -71,3 +71,11 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Describe: badWordRemover()
+
+Test: It should return a word match without bad words.
+Code:
+const text = "zoinks, muppeteer, biffaroni, loopdaloop, hello";
+const word = "hello" ;
+Expected Output: 

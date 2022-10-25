@@ -35,3 +35,19 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+
+function badWordRemover(badWord, textPassage) {
+  const badWordArray = textPassasge.split(" ");
+  let newArray = [];
+  textPassageArray.forEach(function (text) {
+    badWordArray.forEach(function (word) {
+      if (word.toUpperCase() !== text.toUpperCase()) {
+      } else {
+        newArray.push(text);
+      }
+    });
+  });
+
+  console.log(newArray);
+  return newArray.join(" ");
