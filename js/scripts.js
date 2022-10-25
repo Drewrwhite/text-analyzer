@@ -29,9 +29,12 @@ function numberOfOccurrencesInText(word, text) {
 
 
 function numberOfOccurrencesInText(word, text) {
+  if (word.trim().length === 0) {
+    return 0;
+  }
   const textArray = text.split(" ");
   let wordCount = 0;
-  textArray.forEach(function (element) {
+  textArray.forEach(function(element) {
     if (element.toLowerCase().includes(word.toLowerCase())) {
       wordCount++;
     }
@@ -49,14 +52,18 @@ function handleFormSubmission() {
   const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
   document.getElementById("total-count").innerText = wordCount;
   document.getElementById("selected-count").innerText = occurrencesOfWord;
+  // new lines here!
+  let boldedPassage = boldPassage(word, passage);
+  if (boldedPassage) {
+    document.querySelector("div#bolded-passage").append(boldedPassage);
+  } else {
+    document.querySelector("div#bolded-passage").innerText = null;
+  }
 }
 
 window.addEventListener("load", function() {
   document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
 });
-
-
-
 // function omitPunctuation(text) {
 //   const punctuation = [",", ".", "!", "?"];
 //   let newWord = text.split("");
