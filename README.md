@@ -74,8 +74,16 @@ Expected Output: 3
 
 Describe: badWordRemover()
 
-Test: It should return a word match without bad words.
+Test: It should return an empty string.
 Code:
-const text = "zoinks, muppeteer, biffaroni, loopdaloop, hello";
-const word = "hello" ;
+const text = "zoinks";
+const word = "zoinks";
+badWordRemover(word,text);
 Expected Output: 
+
+Test: It should replace a bad word with empty string.
+Code:
+const text ="hello zoinks";
+const word ="zoinks";
+badWordRemover(word,text);
+Expected Output: "hello"
