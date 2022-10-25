@@ -27,6 +27,12 @@ Code:
 wordCounter("hi there 77 19");
 Expected Output: 2
 
-Test:
+
+Describe: numberOfOccurrencesInText()
+
+Test: "It should return 0 occurrences of a word for an empty string."
 Code:
-Expected Output: 
+const text = "";
+const word = "red";
+numberOfOccurrencesInText(word, text);
+Expected Output: 0
