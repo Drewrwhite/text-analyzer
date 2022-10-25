@@ -26,3 +26,7 @@ Test: "It should not count numbers as words."
 Code:
 wordCounter("hi there 77 19");
 Expected Output: 2
+
+Test:
+Code:
+Expected Output: 
